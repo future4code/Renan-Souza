@@ -4,4 +4,7 @@ const email = prompt('Digite o seu e-mail:')
 
 console.log('O e-mail ' + email +' foi cadastrado com sucesso. Seja bem-vinda(o), '  + nomeUsuario);
 
-console.log('teste')
+
+// Exercicio 2 
+
+const comidasPreferidas = ['Strogonoff', 'Arroz', 'Frango', '']
