@@ -80,31 +80,46 @@ function checaStringsMesmoTamanho(string1, string2) {
 
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
-  // implemente sua lógica aqui
-
+  let primeiroElemento = array[0]
+  return primeiroElemento
 }
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
-  // implemente sua lógica aqui
+    return array[array.length-1]
+  
 
 }
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
-
+  let valorFruta = array[0]
+  array[0] = array[array.length-1]
+  array[array.length-1] = valorFruta
+  return array
 }
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  // implemente sua lógica aqui
+  let compara = string1.toLowerCase() === string2.toLowerCase()
+  return compara
 
 }
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
-  // implemente sua lógica aqui
+  const anoAtual = Number(prompt('Qual é o ano atual'))
+  const dataNasci = Number(prompt('Qual é o ano de nascimento'))
+  const emissao = Number(prompt('Qual a data de emissão do seu RG'))
+  const idadeUsuario = (anoAtual - dataNasci)
+  const renova = (anoAtual - emissao)
+
+  const cond1 = (idadeUsuario <=20 && renova >= 5)
+  const cond2 = ((idadeUsuario > 20 && idadeUsuario <=50) && renova >= 10) 
+  const cond3 = (idadeUsuario > 50 && renova >=15)
+
+  console.log(cond1 || cond2 || cond3 ||)
+
 
 }
 
