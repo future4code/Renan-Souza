@@ -4,16 +4,14 @@
 // Virginia Cavendish
 // Globo - 14h
 
-const cachorro = {
-	nome: "Juca", 
-	idade: 3, 
-	raca: "SRD"
-}
+//----------- Exercicio 2 ------------------------ 
 
-const gato = {...cachorro, nome: "Juba"}
+// a)
+//{ nome: "Juca", idade: 3, raca: "SRD"}
+//{ nome: "Juba", idade: 3, raca: "SRD"}
+//{ nome: "Jubo", idade: 3, raca: "SRD"}
 
-const tartaruga = {...gato, nome: gato.nome.replaceAll("a", "o")}
+// b) 
+// //A sintaxe três pontos antes de um objeto ou array
+// é utilizada no Spread Operator (...), que faz uma cópia dos mesmos
 
-console.log(cachorro)
-console.log(gato)
-console.log(tartaruga)
