@@ -47,3 +47,87 @@ const cuponsPoodles = poodles.map((poodle) => {
   })
 
   console.log('item c', cuponsPoodles)
+
+//EXERCÍCIO 2
+
+const produtos = [
+  { nome: "Alface Lavada", categoria: "Hortifruti", preco: 2.5 },
+  { nome: "Guaraná 2l", categoria: "Bebidas", preco: 7.8 },
+  { nome: "Veja Multiuso", categoria: "Limpeza", preco: 12.6 },
+  { nome: "Dúzia de Banana", categoria: "Hortifruti", preco: 5.7 },
+  { nome: "Leite", categoria: "Bebidas", preco: 2.99 },
+  { nome: "Cândida", categoria: "Limpeza", preco: 3.30 },
+  { nome: "Detergente Ypê", categoria: "Limpeza", preco: 2.2 },
+  { nome: "Vinho Tinto", categoria: "Bebidas", preco: 55 },
+  { nome: "Berinjela kg", categoria: "Hortifruti", preco: 8.99 },
+  { nome: "Sabão em Pó Ypê", categoria: "Limpeza", preco: 10.80 }
+];
+
+const nomesProdutos = produtos.map((prod) =>{
+  return prod.nome;
+});
+
+console.log('item a', nomesProdutos);
+
+const produtosComDescontos = produtos.map((prod) => {
+  return {nome: prod.nome, preco: (prod.preco*0.95).toFixed(2)}
+});
+
+console.log('item b', produtosComDescontos);
+
+const bebidas = produtos.filter((prod) =>{
+  return prod.categoria === 'Bebidas';
+});
+
+console.log('item c, bebidas');
+
+const produtosYpe = produtos.filter((prod) => {
+  return prod.nome.includes('Ypê')
+});
+
+console.log('item d', produtosYpe);
+
+const compreYpe: produtosYpe.map((prod) =>{
+  return `Compre ${prod.nome} por ${prod.preco}`;
+});
+
+console.log('item e', compreYpe);
+
+
+// DESAFIO 1
+
+const pokemons = [
+  { nome: "Bulbasaur", tipo: "grama" },
+  { nome: "Bellsprout", tipo: "grama" },
+  { nome: "Charmander", tipo: "fogo" },
+  { nome: "Vulpix", tipo: "fogo" },
+  { nome: "Squirtle", tipo: "água" },
+  { nome: "Psyduck", tipo: "água" },
+]
+
+// ITEM A
+
+const nomePokemons = pokemons.map((poke) => {
+  return poke.nome
+});
+
+console.log(nomePokemons);
+
+const pokemonsOrdenados = nomePokemons.sort((a, b) => a.localeCompare(b))
+
+console.log(pokemonsOrdenados)
+
+// ITEM B
+
+const tipos = pokemons.map((poke) => {
+  return poke.tipo 
+});
+
+console.log(tipos);
+
+const tiposSemRepetir = tipos.filter((tipo, index, array) => {
+  return array.indexOf(tipo) === index;
+
+  console.log('item b', tiposSemRepetir);
+
+});
