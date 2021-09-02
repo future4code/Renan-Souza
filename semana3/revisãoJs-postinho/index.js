@@ -27,7 +27,7 @@ Escreva true or false para as comparações abaixo:
  exemplo 1>2 = false
  a-) 1==='1'= false
  b-) 1=='1'= true
- c-) 'a'==='b'= true
+ c-) 'a'==='b'= false
  d-) 'b'>'a'= true
  e-) 0!==null= true
 
