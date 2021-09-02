@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background: url("/img/computer.jpeg") no-repeat top center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div {
+    ]
+}
